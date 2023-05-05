@@ -10,7 +10,7 @@ class Persona:
         self.dependencia = dependencia
         self.salario = salario
 
-    def IngresarPersona(self):
+    def IngresarPersona(self,apellido,nombre):
         # TODO
         pass
 
@@ -25,3 +25,4 @@ class Persona:
     def AsignarDependencia(self):
         # TODO
         pass
+
