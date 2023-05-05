@@ -1,4 +1,5 @@
 class Persona:
+#cdd
     def __init__(self, cod, ci, apellido, nombre, telefono, direccion, dependencia, salario):
         self.cod = cod
         self.ci = ci
