@@ -5,3 +5,7 @@ class Organigrama:
         self.fec=fec
     def crear_organigrama(self):
         #codigo
+        pass
+    def abrir_organigrama(self):
+        #codigo 
+        pass
