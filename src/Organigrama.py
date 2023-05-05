@@ -9,3 +9,9 @@ class Organigrama:
     def abrir_organigrama(self):
         #codigo 
         pass
+    def copiar_organigrama(self):
+        #codigo
+        pass
+    def graficar_organigrama(self):
+        #codigo
+        pass
