@@ -1,0 +1,12 @@
+{% extends 'layouts/nav.html' %}
+
+{% block content %}
+<h1>Organigramas</h1>
+
+{% for organigrama in organigramas %}
+
+<h2><a href="#">{{organigrama.nombre_organigrama}}</a></h2>
+
+
+{% endfor %}
+{% endblock %}
