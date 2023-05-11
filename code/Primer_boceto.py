@@ -2,7 +2,6 @@ import sys
 from PyQt5 import QtWidgets, uic
 
 app = QtWidgets.QApplication([])
-
 Menu_Principal = uic.loadUi("Pantalla_Principal.ui")
 Ventana2 = uic.loadUi("Pantalla2.ui")
 
