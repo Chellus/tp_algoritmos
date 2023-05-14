@@ -11,21 +11,49 @@ class Database:
         self.cur = self.conn.cursor()
     
     """
-        tabla: tabla en la cual insertar los datos
-        values: tuple conteniendo los datos a ser ingresados
+        tabla: string con la tabla en la cual insertamos los datos
+        values: diccionario conteniendo los datos a ser ingresados
     """
-    def insertarEnTabla(self, tabla, values: tuple):
-        # preparacion de la query a ser realizada
-        stmt = f"INSERT INTO {tabla} VALUES ("
-        for i in range(len(values)-1):
-            stmt += "?, "
-        stmt += "?)"
+    def insertarData(self, table, values):
+        columnas = ""
+        valores = ""
+        valores_lista = []
         
-        # ejecucion de la query preparada
-        try:
-            self.cur.execute(stmt, values)
-        except sqlite3.ProgrammingError:
-            print("SQL::BAD REQUEST")
+        for key in values:
+            columnas += key + ", "
+            valores += "?, "
+            valores_lista.append(values[key])
+
+        columnas = columnas[0:len(columnas)-2]
+        valores = valores[0:len(valores)-2]
+        query = f"INSERT INTO {table} ({columnas}) VALUES ({valores});"
+        valores_tuple = tuple(valores_lista)
+        self.cur.execute(query, valores_tuple)
+        self.conn.commit()
+        
     
-    def buscarEnTabla(self, tabla, values: tuple):
+    """
+        tabla: tabla de la cual buscamos los datos
+        condition: condicion para el where, si no se pasa se devuelve todo lo de la tabla
+        columns: columnas que queremos de la busqueda, si no se pasa se devuelven todas las columnas
+    """
+    def buscarData(self, tabla, condition:str =None, columns:list =None):
+        # preparacion de la query a ser realizada
+        columnas = "*"
+        if columns != None:
+            columnas = ""
+            for i in range(len(columns)-1):
+                columnas += columns[i] + ", "
+            columnas += columns[len(columns)-1]
         
+        stmt = f"SELECT {columnas} FROM {tabla}"
+        if condition != None:
+            stmt += " WHERE " + condition
+
+        try:
+            self.cur.execute(stmt)
+            res = self.cur.fetchall()
+        except sqlite3.Error:
+            print("SQL::BAD REQUEST")
+
+        return res
