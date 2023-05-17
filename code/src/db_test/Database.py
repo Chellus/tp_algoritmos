@@ -50,10 +50,13 @@ class Database:
         if condition != None:
             stmt += " WHERE " + condition
 
+        print(stmt)
         try:
             self.cur.execute(stmt)
             res = self.cur.fetchall()
+            
         except sqlite3.Error:
             print("SQL::BAD REQUEST")
+            res = -1
 
         return res

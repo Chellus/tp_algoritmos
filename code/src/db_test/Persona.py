@@ -13,9 +13,6 @@ class Persona:
     def cambioId(self, id):
         self.id = id
 
-    def getTuple(self):
-        return (self.ci, self.apellido, self.nombre, self.telefono, self.direccion, self.dependencia, self.salario)
-    
     def getDict(self):
         return {
             "ci": self.ci,
