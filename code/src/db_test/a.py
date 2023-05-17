@@ -31,7 +31,7 @@ def main():
     cursor = conn.cursor()
 
     # Obtenci贸n de los datos de la base de datos
-    cursor.execute("SELECT id, nombre, jefe_id FROM empleados")
+    cursor.execute("SELECT id, nombre, id_dependencia FROM Persona")
     data = cursor.fetchall()
 
     conn.close()
