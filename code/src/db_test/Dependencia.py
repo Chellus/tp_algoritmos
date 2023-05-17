@@ -6,9 +6,6 @@ class Dependencia:
 
     def cambioId(self, id):
         self.id = id
-
-    def getTuple(self):
-        return (self.nombre, self.manager_id)
     
     def getDict(self):
         return {
