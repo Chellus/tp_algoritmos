@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'menuzPXqcJ.ui'
+## Form generated from reading UI file 'menuAZkKlp.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2.QtCore import *
-from PySide2.QtGui import *
-from PySide2.QtWidgets import *
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QStackedWidget, QVBoxLayout, QPushButton, QLabel, QFrame, QHBoxLayout, QVBoxLayout, QSpacerItem
+from PyQt5.QtWidgets import QApplication, QWidget, QSizePolicy
+from PyQt5.QtGui import QCursor, QIcon, QFont
+from PyQt5.uic import loadUi
+from PyQt5.QtCore import QCoreApplication, Qt, QSize
+from PyQt5.QtCore import QMetaObject
 
 
 class Ui_CentralWidget(object):
@@ -198,6 +202,7 @@ class Ui_CentralWidget(object):
 
         self.mainbodycontent = QWidget(self.main_body)
         self.mainbodycontent.setObjectName(u"mainbodycontent")
+        self.mainbodycontent.setMinimumSize(QSize(400, 400))
         self.verticalLayout_2 = QVBoxLayout(self.mainbodycontent)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.stackedWidget = QStackedWidget(self.mainbodycontent)

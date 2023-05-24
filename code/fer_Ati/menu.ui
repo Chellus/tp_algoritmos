@@ -337,6 +337,12 @@ color:white;
       </item>
       <item>
        <widget class="QWidget" name="mainbodycontent" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
           <widget class="QStackedWidget" name="stackedWidget">
