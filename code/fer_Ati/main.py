@@ -14,7 +14,7 @@ if __name__ == "__main__":
     window.show()
     sys.exit(app.exec_())
 
- '''
+'''
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QStackedWidget, QVBoxLayout, QPushButton, QLabel, QFrame, QHBoxLayout, QVBoxLayout, QSpacerItem
 from PyQt5.QtWidgets import QApplication, QWidget, QSizePolicy
