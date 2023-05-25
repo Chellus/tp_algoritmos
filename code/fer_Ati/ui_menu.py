@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QStackedWidget, QVBoxLayout, QPushButton, QLabel, QFrame, QHBoxLayout, QVBoxLayout, QSpacerItem
@@ -12,7 +13,7 @@ class Ui_CentralWidget(object):
     def setupUi(self, CentralWidget):
         if not CentralWidget.objectName():
             CentralWidget.setObjectName(u"CentralWidget")
-        CentralWidget.resize(621, 338)
+        CentralWidget.resize(733, 480)
         CentralWidget.setStyleSheet(u"#header,#main_body{\n"
 "background-color:#27263c;\n"
 "}\n"
@@ -36,16 +37,6 @@ class Ui_CentralWidget(object):
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_2)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.pushButton_4 = QPushButton(self.frame_2)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setCursor(QCursor(Qt.PointingHandCursor))
-        icon = QIcon()
-        icon.addFile(u"../../../../../Downloads/icons8-men\u00fa-50.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_4.setIcon(icon)
-        self.pushButton_4.setIconSize(QSize(24, 24))
-
-        self.horizontalLayout_4.addWidget(self.pushButton_4, 0, Qt.AlignLeft)
-
         self.label = QLabel(self.frame_2)
         self.label.setObjectName(u"label")
         font = QFont()
@@ -60,7 +51,7 @@ class Ui_CentralWidget(object):
         self.horizontalLayout_4.addWidget(self.label)
 
 
-        self.horizontalLayout.addWidget(self.frame_2, 0, Qt.AlignLeft)
+        self.horizontalLayout.addWidget(self.frame_2)
 
         self.frame = QFrame(self.header)
         self.frame.setObjectName(u"frame")
@@ -68,33 +59,6 @@ class Ui_CentralWidget(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.pushButton_3 = QPushButton(self.frame)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setCursor(QCursor(Qt.PointingHandCursor))
-        icon1 = QIcon()
-        icon1.addFile(u"../../../../../Downloads/icons8-ver-archivo-50.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon1)
-
-        self.horizontalLayout_3.addWidget(self.pushButton_3)
-
-        self.pushButton_2 = QPushButton(self.frame)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
-        icon2 = QIcon()
-        icon2.addFile(u"../../../../../Downloads/icons8-campana-100.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_2.setIcon(icon2)
-
-        self.horizontalLayout_3.addWidget(self.pushButton_2)
-
-        self.pushButton = QPushButton(self.frame)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setCursor(QCursor(Qt.PointingHandCursor))
-        icon3 = QIcon()
-        icon3.addFile(u"../../../../../Downloads/icons8-usuario-50.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon3)
-
-        self.horizontalLayout_3.addWidget(self.pushButton)
-
 
         self.horizontalLayout.addWidget(self.frame, 0, Qt.AlignRight)
 
@@ -131,30 +95,26 @@ class Ui_CentralWidget(object):
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_5 = QPushButton(self.frame_3)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setCursor(QCursor(Qt.PointingHandCursor))
+        self.INICIO = QPushButton(self.frame_3)
+        self.INICIO.setObjectName(u"INICIO")
+        self.INICIO.setCursor(QCursor(Qt.PointingHandCursor))
+        self.INICIO.setLayoutDirection(Qt.LeftToRight)
 
-        self.verticalLayout_5.addWidget(self.pushButton_5)
+        self.verticalLayout_5.addWidget(self.INICIO)
 
-        self.pushButton_6 = QPushButton(self.frame_3)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-        self.pushButton_6.setCursor(QCursor(Qt.PointingHandCursor))
+        self.pushButton = QPushButton(self.frame_3)
+        self.pushButton.setObjectName(u"pushButton")
 
-        self.verticalLayout_5.addWidget(self.pushButton_6)
+        self.verticalLayout_5.addWidget(self.pushButton)
 
-        self.pushButton_7 = QPushButton(self.frame_3)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setCursor(QCursor(Qt.PointingHandCursor))
+        self.INFORMES = QPushButton(self.frame_3)
+        self.INFORMES.setObjectName(u"INFORMES")
+        self.INFORMES.setCursor(QCursor(Qt.PointingHandCursor))
 
-        self.verticalLayout_5.addWidget(self.pushButton_7)
+        self.verticalLayout_5.addWidget(self.INFORMES)
 
 
         self.verticalLayout_4.addWidget(self.frame_3)
-
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_4.addItem(self.verticalSpacer)
 
         self.frame_4 = QFrame(self.widget)
         self.frame_4.setObjectName(u"frame_4")
@@ -164,11 +124,9 @@ class Ui_CentralWidget(object):
         self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_8 = QPushButton(self.frame_4)
-        self.pushButton_8.setObjectName(u"pushButton_8")
-        self.pushButton_8.setCursor(QCursor(Qt.PointingHandCursor))
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_6.addWidget(self.pushButton_8)
+        self.verticalLayout_6.addItem(self.verticalSpacer)
 
         self.pushButton_9 = QPushButton(self.frame_4)
         self.pushButton_9.setObjectName(u"pushButton_9")
@@ -221,21 +179,19 @@ class Ui_CentralWidget(object):
 
         self.retranslateUi(CentralWidget)
 
+        self.stackedWidget.setCurrentIndex(0)
+
+
         QMetaObject.connectSlotsByName(CentralWidget)
     # setupUi
 
     def retranslateUi(self, CentralWidget):
         CentralWidget.setWindowTitle(QCoreApplication.translate("CentralWidget", u"Form", None))
-        self.pushButton_4.setText("")
         self.label.setText(QCoreApplication.translate("CentralWidget", u"ORGANIFILE", None))
-        self.pushButton_3.setText("")
-        self.pushButton_2.setText("")
-        self.pushButton.setText("")
-        self.pushButton_5.setText(QCoreApplication.translate("CentralWidget", u"HOME", None))
-        self.pushButton_6.setText(QCoreApplication.translate("CentralWidget", u"INFORMES", None))
-        self.pushButton_7.setText(QCoreApplication.translate("CentralWidget", u"MI CUENTA", None))
-        self.pushButton_8.setText(QCoreApplication.translate("CentralWidget", u"SETTINGS", None))
-        self.pushButton_9.setText(QCoreApplication.translate("CentralWidget", u"HELP", None))
-        self.pushButton_10.setText(QCoreApplication.translate("CentralWidget", u"ABOUT", None))
+        self.INICIO.setText(QCoreApplication.translate("CentralWidget", u"INICIO", None))
+        self.pushButton.setText(QCoreApplication.translate("CentralWidget", u"CREAR ORGANIGRAMA", None))
+        self.INFORMES.setText(QCoreApplication.translate("CentralWidget", u"ABRIR ORGANIGRAMA", None))
+        self.pushButton_9.setText(QCoreApplication.translate("CentralWidget", u"AYUDA", None))
+        self.pushButton_10.setText(QCoreApplication.translate("CentralWidget", u"SOBRE NOSOTROS", None))
     # retranslateUi
 
